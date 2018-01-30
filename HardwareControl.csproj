@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{834C1921-C214-45AC-AD6E-09379B8AE15A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HardwareControl</RootNamespace>
+    <AssemblyName>HardwareControl</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="libzkfpcsharp, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\Desktop\libzkfpcsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism">
+      <HintPath>..\..\..\packages\Desktop\Microsoft.Practices.Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Interactivity">
+      <HintPath>..\..\..\packages\Desktop\Microsoft.Practices.Prism.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.MefExtensions">
+      <HintPath>..\..\..\packages\Desktop\Microsoft.Practices.Prism.MefExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.UnityExtensions">
+      <HintPath>..\..\..\packages\Desktop\Microsoft.Practices.Prism.UnityExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\..\packages\Desktop\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Function\MakeBCC.cs" />
+    <Compile Include="Function\MakeCRC.cs" />
+    <Compile Include="Function\MakeSUM.cs" />
+    <Compile Include="Reader\DllMethod\BaseMethod.cs" />
+    <Compile Include="Reader\Interface\IPassword.cs" />
+    <Compile Include="Reader\Interface\PasswordModel.cs" />
+    <Compile Include="Reader\Repository\Model\BlockBase.cs" />
+    <Compile Include="Reader\Repository\Model\CardBase.cs" />
+    <Compile Include="Reader\Repository\Model\SampleRandom.cs" />
+    <Compile Include="Reader\Repository\Model\SectionBase.cs" />
+    <Compile Include="Reader\Repository\Model\ZY2000Block00.cs" />
+    <Compile Include="Reader\Repository\Model\ZY2000Block01.cs" />
+    <Compile Include="Reader\Repository\Model\ZY2000Block02.cs" />
+    <Compile Include="Reader\Repository\Model\ZY2000Block10.cs" />
+    <Compile Include="Reader\Repository\Model\ZY2000Block11.cs" />
+    <Compile Include="Reader\Repository\Model\ZY2000Block12.cs" />
+    <Compile Include="Reader\Repository\Model\ZY2000Block21.cs" />
+    <Compile Include="Reader\Repository\Model\ZY2000Block22.cs" />
+    <Compile Include="Reader\Repository\Model\ZY2000Block3.cs" />
+    <Compile Include="Reader\Repository\Model\ZY2000Block20.cs" />
+    <Compile Include="Reader\Repository\Model\ZY2000Card.cs" />
+    <Compile Include="Reader\Repository\Model\ZY2000Section0.cs" />
+    <Compile Include="Reader\Repository\Model\ZY2000Section1.cs" />
+    <Compile Include="Reader\Repository\Model\ZY2000Section2.cs" />
+    <Compile Include="Reader\DllMethod\MWR6\ReaderM1S50Method.cs" />
+    <Compile Include="Reader\Factory\ReaderFactory.cs" />
+    <Compile Include="Reader\ReaderHelper.cs" />
+    <Compile Include="Reader\Repository\HYYY_R6U141_M1S50.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reader\Interface\IReaderCommand.cs" />
+    <Compile Include="Reader\DllMethod\MWR6\ReaderDllMethod.cs" />
+    <Compile Include="Sensor\BitmapFormat.cs" />
+    <Compile Include="Sensor\Interface\ISensorCommonds.cs" />
+    <Compile Include="Sensor\SensorAction.cs" />
+    <Compile Include="Sensor\SensorModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Mwic_32.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="mwReader.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\OilcanCalibration\Domain\ClientModel\ClientModel.csproj">
+      <Project>{2a7f815a-331c-458e-b4f2-1be69396ca1e}</Project>
+      <Name>ClientModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Sensor\Factory\" />
+    <Folder Include="Sensor\Repository\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
